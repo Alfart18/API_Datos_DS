@@ -11,7 +11,7 @@ const usbRouter = require('./usb.route')
 
 function rutas(app) {
   app.get('/',(req, res)=> {
-    res.send("API 'Es un Rasho es un mostruo' ACTIVAO 24/7")
+    res.send("API...")
    });
   const router = express.Router();
   app.use('/DS', router)
