@@ -5,7 +5,7 @@ const router = express.Router();
 router.get('/', async function (req, res) {
   res.json([
     {
-      Entrada: "MONITOR",
+      Dispositivo: "MONITOR",
       Marca: ((await si.graphics()).displays[0].vendor),
       Modelo: ((await si.graphics()).displays[0].model),
       Nombre_Dispositivo: ((await si.graphics()).displays[0].deviceName),
@@ -18,7 +18,7 @@ router.get('/', async function (req, res) {
     },
 
     {
-      Entrada: "CONTROLADOR",
+      Dispositivo: "CONTROLADOR",
       Marca: ((await si.graphics()).controllers[0].vendor),
       Modelo: ((await si.graphics()).controllers[0].model),
       Bus: ((await si.graphics()).controllers[0].bus),
