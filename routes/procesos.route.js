@@ -5,7 +5,7 @@ const router = express.Router();
 router.get('/',async function (req, res) {
   res.json([
     {
-         
+      Procesos: ((await si.currentLoad())),
     }
   ])
 })
