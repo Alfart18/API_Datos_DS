@@ -8,7 +8,10 @@ router.get('/',async function (req, res) {
          Marca : (await si.bios()).vendor,
          Version : (await si.bios()).version,
          Numero_serie : (await si.bios()).serial,
-         Fecha_Lanzamiento : (await si.bios()).releaseDate
+         Lenguaje : (await si.bios()).language,
+         Revisión : (await si.bios()).revision,
+         Fecha_Lanzamiento : (await si.bios()).releaseDate,
+         Caracteristicas : (await si.bios()).features
     }
   ])
 })
