@@ -10,7 +10,7 @@ router.get('/', async function (req, res) {
             Version: (await si.baseboard()).version,
             Numero_serie: (await si.baseboard()).serial,
             Men_Max: (await si.baseboard()).memMax,
-            RAM_Men: (await si.baseboard()).memSlots
+            RAM_Men: (await si.baseboard()).memSlots,
         }
     ])
 })

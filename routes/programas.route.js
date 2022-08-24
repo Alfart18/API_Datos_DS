@@ -15,7 +15,8 @@ router.get('/',async function (req, res) {
          Php : (await si.versions()).php,
          Postgresql : (await si.versions()).postgresql,
          Mysql : (await si.versions()).mysql,
-         Python : (await si.versions()).python3
+         Python : (await si.versions()).python3,
+         versiones: (await si.versions())
     }
   ])
 })
