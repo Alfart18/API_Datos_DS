@@ -1,6 +1,6 @@
 const express = require("express");
 const app = express();
-const rutas = require('./routes');
+const rutas = require('./app/routes');
 
 const port = 3000;
 app.use(express.json());

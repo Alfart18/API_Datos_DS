@@ -1,8 +1,6 @@
-const express = require("express");
 const si = require('systeminformation');
-const router = express.Router();
 
-router.get('/', async function (req, res) {
+exports.getData = async function (req, res) {
     res.json([
         {
             Marca: (await si.baseboard()).manufacturer,
@@ -13,6 +11,4 @@ router.get('/', async function (req, res) {
             RAM_Men: (await si.baseboard()).memSlots,
         }
     ])
-})
-
-module.exports = router;
+}

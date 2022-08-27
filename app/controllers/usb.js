@@ -1,8 +1,6 @@
-const express = require("express");
 const si = require('systeminformation');
-const router = express.Router();
 
-router.get('/', async function (req, res) {
+exports.getData = async function (req, res) {
     res.json([
         {
             Entrada: "Entrada N°1",
@@ -40,6 +38,4 @@ router.get('/', async function (req, res) {
             ID: ((await si.usb())[5].id)
         }
     ])
-})
-
-module.exports = router;
+}

@@ -1,8 +1,6 @@
-const express = require("express");
 const si = require('systeminformation');
-const router = express.Router();
 
-router.get('/',async function (req, res) {
+exports.getData = async function (req, res) {
     res.json([
         {
             Marca :  ((await si.memLayout())[0].manufacturer) + "", 
@@ -13,6 +11,4 @@ router.get('/',async function (req, res) {
             Men_Used: (await si.mem()).used / 1000000000
         }
     ])
-})
-
-module.exports = router;
+}
