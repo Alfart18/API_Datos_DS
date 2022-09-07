@@ -4,7 +4,7 @@ exports.getData = async function (req, res) {
     res.json([
         {
            Sistema_Operativo : (await si.osInfo()).platform,
-           Distrubucion : (await si.osInfo()).distro,
+           Distribucion : (await si.osInfo()).distro,
            Version : (await si.osInfo()).release,
            Arquitectura : (await si.osInfo()).arch,
            Numero_serie : (await si.osInfo()).serial,

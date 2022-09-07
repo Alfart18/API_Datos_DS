@@ -14,6 +14,7 @@ exports.getData = async function (req, res) {
            Postgresql : (await si.versions()).postgresql,
            Mysql : (await si.versions()).mysql,
            Python : (await si.versions()).python3,
+           Node : (await si.versions()).node,
            versiones: (await si.versions())
       }
     ])
