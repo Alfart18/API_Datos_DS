@@ -15,7 +15,10 @@ exports.getData = async function (req, res) {
            Mysql : (await si.versions()).mysql,
            Python : (await si.versions()).python3,
            Node : (await si.versions()).node,
-           versiones: (await si.versions())
+           Mongodb: ((await si.versions()).mongodb),
+           Yarn: ((await si.versions()).yarn),
+           Nginx: ((await si.versions()).nginx),
+           Dotnet: ((await si.versions()).dotnet),
       }
     ])
   }
